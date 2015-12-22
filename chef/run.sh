@@ -28,4 +28,6 @@ ROLEFILE="${PWD}/role-${ROLE}.json"
 
 if [ ! -f $ROLEFILE ]; then echo "$ROLEFILE does not exist"; exit 1; fi
 
+find /usr -name chef-solo
+
 chef-solo -c $PWD/solo.rb -j $ROLEFILE
