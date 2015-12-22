@@ -32,7 +32,7 @@ echo 'path:' $PATH
 echo 'shell:' $SHELL
 echo 'chef-solo?'
 find /usr -name chef-solo
-ls -ld . /usr/bin/chef-solo
+ls -ld /usr/bin/chef-solo /opt/chefdk/bin/chef-solo
 echo 'chef-solo??'
 hash -d chef-solo
 which chef-solo
