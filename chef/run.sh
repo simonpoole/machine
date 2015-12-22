@@ -3,6 +3,9 @@
 # Install the chef ruby gem if chef-solo is not in the path.
 # This script is safe to run multiple times.
 #
+echo 'chef-solo???'
+find /usr -name chef-solo
+
 if [ ! `which chef-solo` ]; then
     release=`lsb_release -r`
     if [ "$release" != "${release/12.04/}" ]; then
@@ -32,9 +35,8 @@ echo 'path:' $PATH
 echo 'shell:' $SHELL
 echo 'chef-solo?'
 find /usr -name chef-solo
-ls -ld /usr/bin/chef-solo /opt/chefdk/bin/chef-solo
+ls -ld /usr/bin/chef-solo
 echo 'chef-solo??'
-hash -d chef-solo
 which chef-solo
 
 chef-solo -c $PWD/solo.rb -j $ROLEFILE
