@@ -32,8 +32,9 @@ echo 'path:' $PATH
 echo 'shell:' $SHELL
 echo 'chef-solo?'
 find /usr -name chef-solo
+ls -ld . /usr/bin/chef-solo
+echo 'chef-solo??'
 hash -d chef-solo
-echo 'chef-solo?'
 which chef-solo
 
 chef-solo -c $PWD/solo.rb -j $ROLEFILE
